@@ -46,11 +46,12 @@ This project is a Exploratory Data Analysis (EDA) on global tech layoffs up to 2
 
 
 ---
----
+
+
 ## 🧹 3. Data Cleaning
 - Were there missing values? How many? In which columns?
     There were missing values in->
-
+---
     USState                          1
     Laid_Off                       372
     Percentage                     449
@@ -59,11 +60,18 @@ This project is a Exploratory Data Analysis (EDA) on global tech layoffs up to 2
     Stage                          164
     Money_Raised_in__mil           364
 ---
+
 - How did you handle nulls — dropped or imputed?
+    Row of USState with 1 null value was dropped
+    Rows which have null values in both percentage and layoff, were dropped as they aren't providing any meaningful information.
 - Were there duplicates? How many?
+    Yes, total 5 duplicates were there
 - Did you remove any outliers? Why?
+    No Outliers were removed as they were real data and not fault in data entry.
 - Any type conversions done? (dates, strings → numeric)
+    Date_layoffs were object type. Therefore it was converted into Date-Time
 - Did you engineer any new features? (e.g. layoff rate, year extracted from date)
+    Yes, Month_layoffs and Year_layoffs were engineered from Date_Layoffs
 
 ---
 
