@@ -190,7 +190,7 @@ The distribution of layoffs is **highly right-skewed** with a skewness of **10.7
 The boxplot shows a **significant number of upper outliers** in layoff counts. These points are identified using the IQR method.
 
 Although they are statistically classified as outliers, they represent **real-world large-scale layoff events** rather than data errors. Therefore, they were retained to preserve the integrity of the analysis and capture meaningful business behavior.
----
+
 
 ## 🔍 Key Insights
 
