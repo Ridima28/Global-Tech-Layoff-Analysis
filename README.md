@@ -46,7 +46,7 @@ This project is a Exploratory Data Analysis (EDA) on global tech layoffs up to 2
 
 
 ---
-
+---
 ## 🧹 3. Data Cleaning
 - Were there missing values? How many? In which columns?
     There were missing values in->
