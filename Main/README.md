@@ -175,38 +175,82 @@ This indicates that layoffs tend to increase toward the end of the year, particu
 ---
 
 ## 🔬 5. Statistical Analysis  
-- What is the distribution of layoff counts? (skewed? normal?)
-- What are mean, median, std of layoffs per company?
-- Are there significant outliers? (boxplot analysis)
-- Is there correlation between funding stage and layoff %?
-- Is there correlation between company age and layoff severity?
-- What does the rolling average trend look like over months?
+- What is the distribution of layoff counts? (skewed? normal?) Right-skewed, skewness = 10.788443160839588
+- What are mean, median, std of layoffs per company? ->
+ Mean: 458.01657458563534
+Median: 80.0
+Standard Deviation: 2599.669327223075
+- Are there significant outliers? (boxplot analysis) -> The boxplot of the Laid_Off variable shows a highly right-skewed distribution with numerous extreme upper outliers. Most observations are concentrated at relatively low layoff counts. These values are considered statistical outliers according to the IQR rule; however, they represent genuine large-scale layoff events rather than data entry errors. Therefore, these outliers were retained in the analysis because they contain important real-world information.
+---
+
+## 🔍 Key Insights
+
+###  Biggest Finding
+The **USA accounted for 80.4% of all recorded layoffs worldwide**, making it the dominant contributor despite being one of the world's most developed technology markets.
+
+###  Biggest Surprise
+Although **Japan ranked #1 in average layoffs per company**, it ranked only **9th in total layoffs**. In contrast, the **USA ranked 4th in average layoffs** but had the **highest total number of employees laid off**.
+
+###  Counterintuitive Insight
+Before analyzing the data, I expected **Google** to have the largest layoffs due to its media visibility. Surprisingly, **Amazon** recorded the highest number of layoffs, while **Google ranked 7th**.
+
+###  Recurring Pattern
+Layoffs showed an **upward trend year after year**, with a dramatic surge beginning in **2022**.
+
+###  Future Outlook
+The data suggests that the post-pandemic hiring boom has ended. Since **2022, layoffs have increased roughly threefold**, indicating that technology companies may continue prioritizing restructuring and cautious hiring in the near future.
 
 ---
 
-## 💡 6. Key Insights & Findings *(most important section)*
-- What was the single biggest finding?
-- What surprised you in the data?
-- Which insight is counterintuitive?
-- What pattern repeats across years?
-- What does the data suggest about the future of tech hiring?
-- Example: *"Post-2022, layoffs accelerated 3× — coinciding with Fed rate hikes and end of pandemic-era hiring boom"*
+## ⚠️ Limitations
+
+###  What the Data Can't Tell Us
+- The data does not explain **why** layoffs occurred, such as financial performance, restructuring, mergers, or automation.
+
+###  Dataset Completeness
+- The dataset is **not guaranteed to be complete**.
+- It relies on publicly reported layoff announcements and news sources, meaning some events—especially from smaller or private companies—may be missing.
+
+###  Survivorship Bias
+- Larger and well-known technology companies are more likely to have their layoffs publicly reported.
+- As a result, the dataset may **overrepresent major companies** while under-representing startups and smaller firms.
+
+###  Can These Findings Be Generalized Globally?
+- **Not entirely.**
+- Since **80.4% of recorded layoffs occurred in the USA**, the dataset is heavily skewed toward the U.S. technology sector.
+- Therefore, the findings are more representative of **global tech companies with strong U.S. presence** than of the worldwide labor market as a whole.
 
 ---
 
-## ⚠️ 7. Limitations
-- What can't this data tell us? (e.g. total tech workforce size unknown)
-- Is the dataset complete or self-reported?
-- Any survivorship bias? (only big companies get reported)
-- Can you generalize findings globally?
+## 🚀 Future Scope
 
----
+Although this project focuses on exploratory data analysis, there are several opportunities to extend it into predictive and business-oriented applications.
 
-## 🚀 8. Future Scope *(shows DS thinking)*
-- Can you predict which companies might lay off next?
-- Can you build a layoff risk score per company?
-- What external data could enrich this? (stock prices, interest rates, VC funding trends)
-- Could NLP on news headlines add signal?
+### 🤖 Predict Future Layoffs
+Develop machine learning models to estimate which companies are more likely to announce layoffs based on historical trends and company characteristics.
+
+### 📊 Build a Layoff Risk Score
+Create a risk scoring system that ranks companies according to their likelihood of future layoffs using factors such as funding, industry, location, company stage, and previous layoff history.
+
+### 📈 Integrate External Economic Data
+Enrich the dataset with external indicators to better understand the drivers of layoffs, including:
+- Stock market performance
+- Interest and inflation rates
+- Venture capital funding trends
+- Company financial statements
+- Macroeconomic indicators (GDP growth, unemployment, etc.)
+
+### 📰 News & Sentiment Analysis
+Apply Natural Language Processing (NLP) to news articles, earnings reports, and press releases to detect early warning signals of workforce reductions.
+
+### 🌍 Interactive Dashboard
+Build an interactive dashboard using **Power BI**, **Tableau**, or **Streamlit** that allows users to explore layoffs by country, company, industry, and time period.
+
+### ⏳ Forecast Layoff Trends
+Use time-series forecasting techniques (e.g., ARIMA, Prophet, or LSTM) to predict future layoff volumes and identify seasonal or cyclical patterns.
+
+### 🔍 Company Benchmarking
+Compare companies within the same industry to identify organizations that experienced unusually high or low layoff rates relative to their peers.
 
 ---
 
