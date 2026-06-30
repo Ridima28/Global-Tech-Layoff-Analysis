@@ -174,13 +174,22 @@ This indicates that layoffs tend to increase toward the end of the year, particu
 
 ---
 
-## 🔬 5. Statistical Analysis  
-- What is the distribution of layoff counts? (skewed? normal?) Right-skewed, skewness = 10.788443160839588
-- What are mean, median, std of layoffs per company? ->
- Mean: 458.01657458563534
-Median: 80.0
-Standard Deviation: 2599.669327223075
-- Are there significant outliers? (boxplot analysis) -> The boxplot of the Laid_Off variable shows a highly right-skewed distribution with numerous extreme upper outliers. Most observations are concentrated at relatively low layoff counts. These values are considered statistical outliers according to the IQR rule; however, they represent genuine large-scale layoff events rather than data entry errors. Therefore, these outliers were retained in the analysis because they contain important real-world information.
+## 🔬 5. Statistical Analysis
+
+### 📊 Distribution of Layoff Counts
+The distribution of layoffs is **highly right-skewed** with a skewness of **10.79**, indicating that most companies have relatively low layoff counts, while a small number of companies have extremely high layoffs.
+
+### 📈 Descriptive Statistics
+- **Mean:** 458.02  
+- **Median:** 80.00  
+- **Standard Deviation:** 2599.67  
+
+ The large difference between the mean and median confirms that the data is **strongly skewed**, with a few extreme values pulling the average upward.
+
+### ⚠️ Outlier Analysis
+The boxplot shows a **significant number of upper outliers** in layoff counts. These points are identified using the IQR method.
+
+Although they are statistically classified as outliers, they represent **real-world large-scale layoff events** rather than data errors. Therefore, they were retained to preserve the integrity of the analysis and capture meaningful business behavior.
 ---
 
 ## 🔍 Key Insights
@@ -229,9 +238,6 @@ Although this project focuses on exploratory data analysis, there are several op
 ### 🤖 Predict Future Layoffs
 Develop machine learning models to estimate which companies are more likely to announce layoffs based on historical trends and company characteristics.
 
-### 📊 Build a Layoff Risk Score
-Create a risk scoring system that ranks companies according to their likelihood of future layoffs using factors such as funding, industry, location, company stage, and previous layoff history.
-
 ### 📈 Integrate External Economic Data
 Enrich the dataset with external indicators to better understand the drivers of layoffs, including:
 - Stock market performance
@@ -240,23 +246,27 @@ Enrich the dataset with external indicators to better understand the drivers of 
 - Company financial statements
 - Macroeconomic indicators (GDP growth, unemployment, etc.)
 
-### 📰 News & Sentiment Analysis
-Apply Natural Language Processing (NLP) to news articles, earnings reports, and press releases to detect early warning signals of workforce reductions.
-
 ### 🌍 Interactive Dashboard
 Build an interactive dashboard using **Power BI**, **Tableau**, or **Streamlit** that allows users to explore layoffs by country, company, industry, and time period.
 
-### ⏳ Forecast Layoff Trends
-Use time-series forecasting techniques (e.g., ARIMA, Prophet, or LSTM) to predict future layoff volumes and identify seasonal or cyclical patterns.
 
 ### 🔍 Company Benchmarking
 Compare companies within the same industry to identify organizations that experienced unusually high or low layoff rates relative to their peers.
 
 ---
 
-## 🛠️ 9. How to Run
-- Requirements / dependencies
-- How to clone and run the notebook
-- Dataset download link
+## 🛠️ How to Run
 
----
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Ridima28/GLOBAL-TECH-LAYOFF-ANALYSIS.git
+cd GLOBAL-TECH-LAYOFF-ANALYSIS
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install pandas numpy matplotlib seaborn plotly jupyter
+```
+
