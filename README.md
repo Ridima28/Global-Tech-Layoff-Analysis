@@ -84,20 +84,67 @@ This project is a Exploratory Data Analysis (EDA) on global tech layoffs up to 2
 ```
 ---
 
-## 📈 4. EDA — Questions You Answered
-- Which year had the most layoffs?
-- Which month sees the highest layoff activity?
-- Which industry was hit hardest overall?
-- Which industry recovered fastest?
-- Which company laid off the most people in absolute numbers?
-- Which company laid off the highest % of its workforce?
-- Which country had the most layoffs outside the US?
-- What is the USA's % share of global layoffs?
-- Are layoffs concentrated in a few companies or spread out?
-- How did layoffs trend over time — sudden spike or gradual?
-- Is there a seasonal pattern (Q1 vs Q4)?
-- What funding stage companies laid off the most? (Series A, B, Post-IPO?)
-- Did companies that went public (IPO) lay off more than private ones?
+# 📈 Exploratory Data Analysis (EDA)
+
+The following questions were explored to better understand global layoff trends across companies, industries, countries, and time.
+
+## Key Findings
+
+### 📅 Which year had the most layoffs?
+- **2025** recorded the highest number of layoffs.
+
+### 📆 Which month had the highest layoff activity?
+- **January** experienced the highest number of layoffs.
+
+### 🏭 Which industry was hit the hardest overall?
+- **Consumer** was the most impacted industry in terms of total layoffs.
+
+### 📈 Which industry recovered the fastest?
+- **Retail** showed the quickest recovery based on the observed layoff trends.
+
+### 🏢 Which company laid off the most employees?
+- **Amazon** had the highest number of layoffs in absolute terms.
+
+### 📉 Which company laid off the highest percentage of its workforce?
+- **Amazon** recorded the highest workforce reduction, laying off approximately **34%** of its employees.
+
+### 🌍 Which country had the most layoffs outside the United States?
+- **India** recorded the highest number of layoffs outside the U.S.
+
+### 🇺🇸 What percentage of global layoffs occurred in the United States?
+- The **United States accounted for approximately 80.3%** of all reported global layoffs.
+
+---
+
+## Additional Insights
+
+### 📊 Are layoffs concentrated in a few companies or spread across many?
+Layoffs are **fairly distributed across many companies**, rather than being concentrated in only a few. While **Amazon recorded the highest absolute number of layoffs**, the overall data indicates that workforce reductions affected a broad range of organizations.
+
+### 📈 How did layoffs trend over time?
+The overall trend shows a **gradual increase with periodic spikes**, rather than a single sudden surge.
+
+- Layoffs began increasing noticeably in **2021**.
+- They **peaked in 2022**.
+- Layoffs declined during **2024**.
+- The trend remained elevated but lower throughout **2025**.
+
+### 📅 Is there a seasonal pattern (Q1 vs. Q4)?
+Yes. The data suggests a clear seasonal pattern, with **Q4 experiencing substantially more layoffs than Q1**.
+
+| Quarter | Months | Total Layoffs |
+|---------|--------|--------------:|
+| **Q1** | January – March | **27,762** |
+| **Q4** | October – December | **76,373** |
+
+**Key Observation**
+
+- **Q4:** 76,373 layoffs
+- **Q1:** 27,762 layoffs
+- **Difference:** 48,611 layoffs
+- **Q4 experienced approximately 2.75× more layoffs than Q1.**
+
+This indicates that layoffs tend to increase toward the end of the year, particularly during **October and November**.
 
 ---
 
