@@ -1,87 +1,113 @@
-## Project Overview
+# 📊 Project Overview
 
-This project is a Exploratory Data Analysis (EDA) on global tech layoffs up to 2025.
+This project presents an **Exploratory Data Analysis (EDA)** of global tech layoffs reported between **2020 and 2025**. The analysis explores workforce reduction trends across companies, industries, countries, and time to identify meaningful patterns and insights.
 
-    Dataset Source:
-        Kaggle: Layoffs 2020–2025 dataset (community-reported layoff records)
-        Time range: 2020 – 2025
-     Why this topic?
-        I chose this topic because:
-        Global layoffs increased significantly after 2020
-        It helps understand economic downturns, and tech industry trends
-        It provides strong real-world insights into workforce dynamics
-     Tools Used:
-        Python
-        Pandas
-        Matplotlib
-        Seaborn
-        NumPy
+## 📌 Dataset
 
----
+- **Source:** Kaggle – *tech_layoffs_till_2025* (community-reported layoff records)
+- **Time Period:** 2020 – 2025
 
-## Dataset Description
+### Why this project?
 
-    Shape of dataset:
-        Rows: 2412
-        Columns: 18
-    Column Name:
-        Nr                          
-        Company                     
-        Location_HQ                 
-        Region                      
-        USState                     
-        Country                     
-        Continent                   
-        Laid_Off                    
-        Date_layoffs                
-        Percentage                  
-        Company_Size_before_Layoffs 
-        Company_Size_after_layoffs  
-        Industry                    
-        Stage                       
-        Money_Raised_in__mil        
-        Year                        
-        latitude                    
-        longitude       
+The technology industry has experienced significant workforce reductions since 2020. This project aims to:
 
+- Analyze how layoffs evolved over time.
+- Understand the industries and companies most affected.
+- Identify geographical trends in layoffs.
+- Explore seasonal and yearly layoff patterns.
+- Demonstrate practical data cleaning, visualization, and exploratory data analysis techniques using Python.
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
 
 ---
 
+# 📂 Dataset Description
 
-## 🧹 3. Data Cleaning
-- Were there missing values? How many? In which columns?
-    There were missing values in->
+### Dataset Shape
+
+| Attribute | Value |
+|-----------|------:|
+| Rows | **2,412** |
+| Columns | **18** |
+
+### Dataset Columns
+
+| Column Name | Description |
+|-------------|-------------|
+| `Nr` | Record identifier |
+| `Company` | Company name |
+| `Location_HQ` | Company headquarters location |
+| `Region` | Geographic region |
+| `USState` | U.S. state (if applicable) |
+| `Country` | Country where layoffs occurred |
+| `Continent` | Continent |
+| `Laid_Off` | Number of employees laid off |
+| `Date_layoffs` | Date of layoff announcement |
+| `Percentage` | Percentage of workforce laid off |
+| `Company_Size_before_Layoffs` | Workforce size before layoffs |
+| `Company_Size_after_layoffs` | Workforce size after layoffs |
+| `Industry` | Company industry |
+| `Stage` | Company funding stage |
+| `Money_Raised_in__mil` | Total funding raised (in millions) |
+| `Year` | Year of layoff |
+| `latitude` | Latitude of headquarters |
+| `longitude` | Longitude of headquarters |
+
 ---
-    USState                          1
-    Laid_Off                       372
-    Percentage                     449
-    Company_Size_before_Layoffs    643
-    Company_Size_after_layoffs     555
-    Stage                          164
-    Money_Raised_in__mil           364
----
-```
-- How did you handle nulls - dropped or imputed?
 
-    Row of USState with 1 null value was dropped
-    Rows which have null values in both percentage and layoff, were dropped as they aren't providing any meaningful information.
+# 🧹 Data Cleaning
 
-- Were there duplicates? How many?
+Data cleaning was performed to improve the quality and consistency of the dataset before analysis.
 
-    Yes, total 5 duplicates were there
+## Missing Values
 
-- Did you remove any outliers? Why?
+The following columns contained missing values:
 
-    No Outliers were removed as they were real data and not fault in data entry.
+| Column | Missing Values |
+|--------|---------------:|
+| `USState` | 1 |
+| `Laid_Off` | 372 |
+| `Percentage` | 449 |
+| `Company_Size_before_Layoffs` | 643 |
+| `Company_Size_after_layoffs` | 555 |
+| `Stage` | 164 |
+| `Money_Raised_in__mil` | 364 |
 
-- Any type conversions done? (dates, strings → numeric)
+### Handling Missing Values
 
-    Date_layoffs were object type. Therefore it was converted into Date-Time
+- Removed the single row containing a missing value in **USState**.
+- Removed rows where **both `Laid_Off` and `Percentage` were missing**, as they did not provide sufficient information for analysis.
+- Remaining missing values were retained where appropriate to preserve the integrity of the original dataset.
 
-- Did you engineer any new features? (e.g. layoff rate, year extracted from date)
+## Duplicate Records
 
-    Yes, Month_layoffs and Year_layoffs were engineered from Date_Layoffs
-```
+- **Duplicate rows found:** **5**
+- All duplicate records were removed.
+
+## Outlier Treatment
+
+No outliers were removed because the extreme values represented genuine layoff events rather than data entry errors.
+
+## Data Type Conversions
+
+- Converted the **`Date_layoffs`** column from **object** to **datetime** format to enable time-series analysis.
+
+## Feature Engineering
+
+Two new features were created from the layoff date:
+
+- **`Month_layoffs`** – Month of the layoff event
+- **`Year_layoffs`** – Year extracted from the layoff date
+
+These features were used for monthly and yearly trend analysis throughout the project.
+
 ---
 
 # 📈 Exploratory Data Analysis (EDA)
@@ -148,7 +174,7 @@ This indicates that layoffs tend to increase toward the end of the year, particu
 
 ---
 
-## 🔬 5. Statistical Analysis *(this is what separates DS from analyst)*
+## 🔬 5. Statistical Analysis  
 - What is the distribution of layoff counts? (skewed? normal?)
 - What are mean, median, std of layoffs per company?
 - Are there significant outliers? (boxplot analysis)
